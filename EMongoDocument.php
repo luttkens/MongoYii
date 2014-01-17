@@ -323,6 +323,7 @@ class EMongoDocument extends EMongoModel{
     protected function instantiate($document){
 		$class = get_class($this);
 		$model = new $class(null);
+        $model->setAttributes($document);
 		return $model;
     }
 
